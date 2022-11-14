@@ -303,6 +303,7 @@ N 220 -1340 580 -1340 {
 lab=VDD_1V8}
 N -640 -610 650 -610 {
 lab=IBP_2U}
+N 190 -1070 200 -1070 {}
 C {cborder/border_s.sym} 400 -480 0 0 {}
 C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 150 -1290 0 0 {name=x1  }
 C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -530 -1290 0 1 {name=x2 }

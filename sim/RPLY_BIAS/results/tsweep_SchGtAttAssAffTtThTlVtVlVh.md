@@ -4,7 +4,7 @@ For details see <a href='tsweep_SchGtAttAssAffTtThTlVtVlVh.html'>tsweep_SchGtAtt
 
 
 |**Parameter**|**View**|**Min** | **Typ** | **Max**|
-|:---| :---:| :---:| :---:| :---:| :---:|
+|:---|:---:|:---:|:---:|:---:|
 |offset\_max | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
 | | Sch|-0.58 mV | 0.53 mV | 1.78 mV |
 |offset\_min | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
