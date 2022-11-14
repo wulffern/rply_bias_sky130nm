@@ -31,7 +31,7 @@ phaseMargin:
   name: Phase Margin
   typ: 60
   min: 45
-  max: 80
+  max: 75
   scale: 1
   unit: ""
 
@@ -39,8 +39,8 @@ unityGain:
   src: ug
   name: Unity Gain Frequency
   typ: 1.5
-  min: 1
-  max: 15
+  min: 5
+  max: 20
   scale: 1e-6
   unit: "MHz"
 

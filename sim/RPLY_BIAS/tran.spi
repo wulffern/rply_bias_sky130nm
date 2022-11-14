@@ -74,6 +74,8 @@ B5 temp 0 v=temper
 + v(V_OFF) i(VDD)
 *+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
 + v(t_op) v(t_on)
++ v(xdut.xota.vstarted)
++ v(xdut.xota.vstart)
 + v(temp)
 #endif
 

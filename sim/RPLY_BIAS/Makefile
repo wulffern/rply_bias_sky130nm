@@ -32,6 +32,7 @@ temp: netlist
 all:
 	${MAKE} tfs TB=tran
 	${MAKE} tfs TB=lstb
+	${MAKE} tfs TB=tsweep
 
 clean:
 	-rm -rf output_*

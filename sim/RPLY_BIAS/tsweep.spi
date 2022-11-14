@@ -40,7 +40,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  0  pwl 0 0 10n {AVDD}
+VDD  VDD_1V8  0  dc  {AVDD}
 VPWR  PWRUP_1V8  0 dc {AVDD}
 
 VLST LPI LPO dc 0
@@ -81,6 +81,16 @@ B5 temp 0 v=temper
 + v(xdut.xota.vbp2)
 + v(xdut.xota.vo_ls)
 + v(xdut.ibp_2u)
++ v(xdut.xota.vs)
++ v(xdut.xota.vbp1)
++ v(xdut.xota.vbp2)
++ v(xdut.xota.vbp3)
++ v(xdut.xota.vbn1)
++ v(xdut.xota.vbn2)
++ v(xdut.vip)
++ v(xdut.vin)
++ v(xdut.xota.vstart)
++ v(xdut.xota.vstarted)
 *+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
 + v(t_op) v(t_on)
 + v(temp)
@@ -97,7 +107,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 2u 0
+optran 0 0 0 10n 1u 0
 
 
 dc TEMP -40 125 5

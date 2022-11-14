@@ -1,2 +1,2 @@
-,f3db,gm_db,lf_gain,pm_deg,ug,v(lpo),v(xdut.vd1),name,type,time,OK
-0,43.96128,-16.53367,43.02085,67.13064,6.0696959999999995,0.7322311,0.7461995,lstb_SchGtAttTtVt,Sch,Sat Nov 12 20:33:11 2022,True
+,f3db,gm_db,lf_gain,pm_deg,ug,v(lpo),v(xdut.vd1),vdiff,name,type,time,OK
+0,77.88137,-16.67713,46.14768,58.49041,14.64322,0.7325177,0.7461288,0.4893524,lstb_SchGtAttTtVt,Sch,Sun Nov 13 18:59:45 2022,True

@@ -1,0 +1,31 @@
+
+offset:
+  src:
+    - offset_max
+    - offset_min
+  typ: 0
+  min: -10
+  max: 10
+  scale: 1e3
+  unit: mV
+
+temperr:
+  src:
+    - m_temp_err_max
+    - m_temp_err_min
+  typ: 0
+  min: -12
+  max: -4
+  scale: 1
+  unit: "C"
+
+vref:
+  src:
+    - vref_avg
+    - vref_max
+    - vref_min
+  typ: 1.22
+  min: -1.5%
+  max: 1.5%
+  digits: 3
+  scale: 1

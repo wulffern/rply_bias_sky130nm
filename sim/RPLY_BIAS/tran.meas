@@ -11,8 +11,9 @@ let r_scale = 5 + 1/8
 echo "MEAS_START"
 
 * Calculate temperature error
+let temp_offset = 8
 let w_diff = v(t_op)-v(t_on)
-let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15
+let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15  + 8
 let w_temp_ref = v(temp)
 let w_temp_err = w_temp-w_temp_ref
 
@@ -22,7 +23,8 @@ meas tran m_temp_err find w_temp_err at=$t_end
 
 * Get currents
 meas tran ibp_1u find i(v1) at=$t_end
-meas tran ivdd find i(vdd) at=$t_end
+meas tran i_active find i(vdd) at=$t_end
+meas tran i_pwrdwn find i(vdd) at=80n
 meas tran vd1 find v(xdut.vd1) at=$t_end
 meas tran vd2 find v(xdut.vd2) at=$t_end
 meas tran vr1 find v(xdut.vr1) at=$t_end

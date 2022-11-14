@@ -28,19 +28,29 @@ ibp:
 
 ivdd:
   src:
-    - ivdd
+    - i_active
   typ: 30
   min: 10
   max: 50
   scale: -1e6
   unit: "uA"
 
+ipwrdwn:
+  src:
+    - i_pwrdwn
+  typ: 0
+  min: 0
+  max: 10
+  scale: -1e9
+  unit: "nA"
+
+
 temp:
   src:
     - m_temp
   typ: 27
   min: -50
-  max: 125
+  max: 130
   scale: 1
   unit: "C"
 
@@ -48,8 +58,8 @@ temperr:
   src:
     - m_temp_err
   typ: 0
-  min: -10
-  max: 10
+  min: -4
+  max: 4
   scale: 1
   unit: "C"
 

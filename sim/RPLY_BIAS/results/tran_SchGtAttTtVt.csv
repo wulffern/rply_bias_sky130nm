@@ -1,2 +1,2 @@
-,dvderr,offset,ibp_1u,ivdd,m_temp,m_temp_err,vref,name,type,time,OK
-0,1.673005,-0.2068703,1.5416180000000002,28.52172,20.23063,-6.769375,1.229039,tran_SchGtAttTtVt,Sch,Sat Nov 12 20:32:21 2022,True
+,dvderr,offset,ibp_1u,i_active,i_pwrdwn,m_temp,m_temp_err,vref,name,type,time,OK
+0,1.44895,-0.4289804,1.538422,34.54118,32.14504,19.65077,-7.349234,1.227922,tran_SchGtAttTtVt,Sch,Sun Nov 13 19:59:31 2022,False

@@ -1,0 +1,42 @@
+*Measure file
+
+.control
+
+load {cicname}.raw
+let k_q=boltz/echarge
+let vd_ref=k_q*(v(temp)+273.15)*ln(64)
+let r_scale = 5 + 1/8
+
+let v-sweep=v(temp)
+
+echo "MEAS_START"
+
+* Calculate temperature error
+let w_diff = v(t_op)-v(t_on)
+let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15
+let w_temp_ref = v(temp)
+let w_temp_err = w_temp-w_temp_ref
+
+meas dc m_temp_err_max MAX w_temp_err
+meas dc m_temp_err_min MIN w_temp_err
+
+meas dc vref_max MAX v(t_op)
+meas dc vref_avg AVG v(t_op)
+meas dc vref_min MIN v(t_op)
+
+* Get currents
+let w_offset = v(xdut.vr1)-v(xdut.vd1)
+meas dc offset_max MAX w_offset
+meas dc offset_min MIN w_offset
+
+let d_vd = v(xdut.vr1)-v(xdut.vd2)
+let d_vd_err = d_vd - vd_ref
+meas dc dvderr_max MAX d_vd_err
+meas dc dvderr_min MIN d_vd_err
+
+
+
+
+echo "MEAS_END"
+
+.endc
