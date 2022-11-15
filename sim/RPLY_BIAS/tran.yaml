@@ -2,6 +2,7 @@ err_kt_q:
   src:
     - dvderr
   typ: 0
+  name: Delta VD error
   min: -10
   max: 10
   scale: 1e3
@@ -12,6 +13,7 @@ offset:
   src:
     - offset
   typ: 0
+  name: OTA input offset
   min: -10
   max: 10
   scale: 1e3
@@ -20,6 +22,7 @@ offset:
 ibp:
   src:
     - ibp_1u
+  name: Bias current
   typ: 1
   min: 0.8
   max: 2
@@ -29,6 +32,7 @@ ibp:
 ivdd:
   src:
     - i_active
+  name: Active current
   typ: 30
   min: 10
   max: 50
@@ -38,6 +42,7 @@ ivdd:
 ipwrdwn:
   src:
     - i_pwrdwn
+  name: Power down current
   typ: 0
   min: 0
   max: 10
@@ -48,6 +53,7 @@ ipwrdwn:
 temp:
   src:
     - m_temp
+  name: Estimated temperature
   typ: 27
   min: -50
   max: 130
@@ -57,6 +63,7 @@ temp:
 temperr:
   src:
     - m_temp_err
+  name: Estimated temperature error
   typ: 0
   min: -4
   max: 4
@@ -66,6 +73,7 @@ temperr:
 vref:
   src:
     - vref
+  name: T_OP voltage (VREF)
   typ: 1.22
   min: -2%
   max: 2%
