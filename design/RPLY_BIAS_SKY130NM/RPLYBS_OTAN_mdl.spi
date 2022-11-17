@@ -1,0 +1,21 @@
+* Ideal model of the OTA
+
+
+
+.subckt RPLYBS_OTAN  VDD_1V8 VO VIP VIN PWRUP_1V8 VSS IBP_2U
+
+X1 D C VIP VIN balun
+
+* Model gain
+BC2 V1 0 V =  atan(V(D)*2*pi*1000)/(2*pi)*V(VDD_1V8)/2 + V(VDD_1V8)/2
+BC3 VO 0 I = V(C) < 300m ? 1u : 0
+
+* Model limit
+R1 V1 VO 100k
+
+C1 VO 0 1p
+
+V1 IBP_2U 0 dc 0
+V2 VSTART 0 dc 0
+
+.ends

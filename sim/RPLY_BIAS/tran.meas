@@ -22,7 +22,11 @@ meas tran m_temp_ref find w_temp_ref at=$t_end
 meas tran m_temp_err find w_temp_err at=$t_end
 
 * Get currents
-meas tran ibp_1u find i(v1) at=$t_end
+meas tran ibp_1u_0 find i(v0) at=$t_end
+meas tran ibp_1u_1 find i(v1) at=$t_end
+meas tran ibp_1u_2 find i(v2) at=$t_end
+meas tran ibp_1u_3 find i(v3) at=$t_end
+
 meas tran i_active find i(vdd) at=$t_end
 meas tran i_pwrdwn find i(vdd) at=80n
 meas tran vd1 find v(xdut.vd1) at=$t_end
