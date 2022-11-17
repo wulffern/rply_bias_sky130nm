@@ -26,6 +26,9 @@ tfs: netlist
 etc: netlist
 	cicsim run --name etc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
 
+etcnotemp: netlist
+	cicsim run --name etcnotemp ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Tt" "Vl,Vh"
+
 mc: netlist
 	cicsim run --name mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Amctt" "Tt" "Vt"
 
@@ -33,7 +36,7 @@ ntc: netlist
 	cicsim run --name ntc ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp: netlist
-	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
+	cicsim run --name temp ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
 
 tfsall:
 	${MAKE} tfs TB=tran OPT=${OPT}
@@ -43,14 +46,16 @@ tfsall:
 etcall:
 	${MAKE} etc TB=tran OPT=${OPT}
 	${MAKE} etc TB=lstb OPT=${OPT}
-	${MAKE} etc TB=tsweep OPT=${OPT}
+
+etcnotempall:
+	${MAKE} etcnotemp TB=tsweep OPT=${OPT}
 
 mcall:
 	${MAKE} mc TB=tran OPT=${OPT}
 	${MAKE} mc TB=lstb OPT=${OPT}
 	${MAKE} mc TB=tsweep OPT=${OPT}
 
-all: tfsall etcall mcall
+all: etcall etcnotempall mcall
 
 clean:
 	-rm -rf output_*

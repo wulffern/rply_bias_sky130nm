@@ -5,7 +5,7 @@
 load {cicname}.raw
 let k_q=boltz/echarge
 let vd_ref=k_q*(v(temp)+273.15)*ln(64)
-let r_scale = 5 + 1/8
+let r_scale = 4.5
 
 let v-sweep=v(temp)
 
@@ -48,6 +48,8 @@ meas dc v(xdut.vd1) find v(xdut.vd1) at=25
 meas dc v(xdut.vr1) find v(xdut.vr1) at=25
 
 *TODO: Fix cicsim, does not seem like it catches errors in meas run
+
+write {cicname}_meas.raw
 
 echo "MEAS_END"
 

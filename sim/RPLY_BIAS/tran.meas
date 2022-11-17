@@ -6,14 +6,15 @@ set t_end=2u
 load {cicname}.raw
 let k_q=boltz/echarge
 let vd_ref=k_q*(v(temp)+273.15)*ln(64)
-let r_scale = 5 + 1/8
+*let r_scale = 5 + 1/8
+let r_scale = 4.5
 
 echo "MEAS_START"
 
 * Calculate temperature error
-let temp_offset = 8
+let temp_offset = 0
 let w_diff = v(t_op)-v(t_on)
-let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15  + 8
+let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15
 let w_temp_ref = v(temp)
 let w_temp_err = w_temp-w_temp_ref
 
@@ -44,7 +45,7 @@ meas tran dvderr find d_vd_err at=$t_end
 
 meas tran vref find v(t_op) at=$t_end
 
-
+write {cicname}_meas.raw
 
 echo "MEAS_END"
 

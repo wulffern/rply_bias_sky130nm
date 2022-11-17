@@ -1,2 +1,2 @@
-,dvderr,offset,ibp_1u,i_active,i_pwrdwn,m_temp,m_temp_err,vref,name,type,time,OK
-0,2.791179,0.9026168999999999,1.567839,33.09452,130.59060000000002,16.99394,-10.00606,1.209369,tran_SchGtAttTtVt,Sch,Thu Nov 17 20:23:24 2022,False
+,dvderr,offset,ibp_1u_0,ibp_1u_1,ibp_1u_2,ibp_1u_3,i_active,i_pwrdwn,m_temp,m_temp_err,vref,name,type,time,OK
+0,2.414022,-0.24967810000000001,1.5722280000000002,1.5722280000000002,1.5722280000000002,1.5722280000000002,48.36954,83.43078,32.95843,5.958426,1.203167,tran_SchGtAttTtVt,Sch,Thu Nov 17 21:01:21 2022,False

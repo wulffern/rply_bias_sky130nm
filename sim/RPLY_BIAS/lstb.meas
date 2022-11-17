@@ -21,6 +21,8 @@ print v(xdut.vr1)
 print v(xdut.vd1)
 print v(xdut.xota.vstart)
 
+write {cicname}_meas.raw
+
 echo "MEAS_END"
 
 .endc
