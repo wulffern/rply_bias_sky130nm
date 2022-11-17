@@ -2,6 +2,11 @@
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
+#ifdef Mdl
+.include ../../../../cpdk/ngspice/balun.spi
+.include ../../../design/RPLY_BIAS_SKY130NM/RPLYBS_OTAN_mdl.spi
+#endif
+
 #ifdef Lay
 .include ../../../work/lpe/RPLY_BIAS_lpe.spi
 #else
@@ -25,6 +30,7 @@
 #else
 .option reltol=1e-6 srcsteps=1 ramptime=10n noopiter gmin=1e-15
 #endif
+
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -71,6 +77,11 @@ B5 temp 0 v=temper
 * PROBE
 *----------------------------------------------------------------
 
+#ifdef Mdl
+.save v(xdut.xota.c)
+.save v(xdut.xota.d)
+#endif
+
 #ifdef Debug
 *.save all
 #else
@@ -94,7 +105,15 @@ B5 temp 0 v=temper
 *+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
 + v(t_op) v(t_on)
 + v(temp)
+.save i(V0)
+.save i(V1)
+.save i(V2)
+.save i(V3)
+.save v(xdut.vc)
+.save v(xdut.vps_1)
 #endif
+
+
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -107,15 +126,14 @@ set color0=white
 set color1=black
 unset askquit
 
+
 optran 0 0 0 10n 1u 0
-
-
-dc TEMP -40 125 5
+dc TEMP -40 85 5
 
 write
+
+
 #ifdef Debug
-
-
 *quit
 #else
 

@@ -7,7 +7,7 @@ E {}
 L 3 -810 -590 840 -590 {}
 L 3 300 -1380 300 -590 {}
 T {Power down } -820 -560 0 0 0.4 0.4 {}
-T {Startup Circuit} 310 -990 0 0 0.4 0.4 {}
+T {Startup Circuit} 390 -1090 0 0 0.4 0.4 {}
 T {OTA} -230 -1130 0 0 0.4 0.4 {}
 N -290 -630 190 -630 {
 lab=VSS}
@@ -237,14 +237,6 @@ N 580 -1340 580 -1290 {
 lab=VDD_1V8}
 N 610 -1340 610 -1320 {
 lab=VDD_1V8}
-N 610 -1180 610 -1160 {
-lab=#net2}
-N 610 -1260 610 -1240 {
-lab=#net3}
-N 580 -1210 610 -1210 {
-lab=VDD_1V8}
-N 580 -1290 580 -1210 {
-lab=VDD_1V8}
 N 610 -860 610 -840 {
 lab=VSTART}
 N 570 -850 610 -850 {
@@ -254,43 +246,17 @@ lab=VSS}
 N 360 -850 360 -690 {
 lab=VSS}
 N 380 -910 380 -880 {
-lab=VO}
-N 190 -910 380 -910 {
+lab=#net2}
+N 190 -980 380 -980 {
 lab=VO}
 N 420 -850 570 -850 {
 lab=VSTART}
 N -670 -870 -640 -610 {
 lab=IBP_2U}
-N 650 -1290 650 -1250 {
-lab=VSTART}
-N 650 -1210 650 -1160 {
-lab=VSTART}
 N 650 -810 650 -610 {
 lab=IBP_2U}
-N 650 -1250 650 -1210 {
-lab=VSTART}
-N 650 -1130 650 -1050 {
-lab=VSTART}
-N 650 -1160 650 -1130 {
-lab=VSTART}
-N 610 -1100 610 -1080 {
-lab=#net4}
-N 580 -1050 610 -1050 {
-lab=VDD_1V8}
-N 580 -1210 580 -1050 {
-lab=VDD_1V8}
-N 580 -1130 610 -1130 {
-lab=VDD_1V8}
-N 650 -1050 650 -1000 {
-lab=VSTART}
-N 610 -1000 650 -1000 {
-lab=VSTART}
-N 610 -1020 610 -1000 {
-lab=VSTART}
-N 610 -1000 610 -860 {
-lab=VSTART}
 N 380 -820 380 -770 {
-lab=#net5}
+lab=#net3}
 N 360 -740 380 -740 {
 lab=VSS}
 N 380 -710 380 -630 {
@@ -303,7 +269,42 @@ N 220 -1340 580 -1340 {
 lab=VDD_1V8}
 N -640 -610 650 -610 {
 lab=IBP_2U}
-N 190 -1070 200 -1070 {}
+N 190 -1070 200 -1070 {
+lab=VO}
+N 610 -940 610 -860 {
+lab=VSTART}
+N 650 -1290 650 -1240 {
+lab=#net4}
+N 610 -1240 650 -1240 {
+lab=#net4}
+N 610 -1260 610 -1240 {
+lab=#net4}
+N 580 -1210 610 -1210 {
+lab=VDD_1V8}
+N 580 -1290 580 -1210 {
+lab=VDD_1V8}
+N 650 -1210 650 -1160 {
+lab=VSTART}
+N 610 -1160 650 -1160 {
+lab=VSTART}
+N 610 -1180 610 -1160 {
+lab=VSTART}
+N 610 -1160 610 -940 {
+lab=VSTART}
+N 360 -940 380 -940 {
+lab=VSS}
+N 360 -940 360 -850 {
+lab=VSS}
+N 380 -980 380 -970 {
+lab=VO}
+N 420 -940 530 -940 {
+lab=#net4}
+N 530 -940 560 -940 {
+lab=#net4}
+N 560 -1250 560 -940 {
+lab=#net4}
+N 560 -1250 610 -1250 {
+lab=#net4}
 C {cborder/border_s.sym} 400 -480 0 0 {}
 C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 150 -1290 0 0 {name=x1  }
 C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -530 -1290 0 1 {name=x2 }
@@ -312,8 +313,8 @@ C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 150 -690 0 0 {name=x7  }
 C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -530 -690 0 1 {name=x6  }
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -690 -390 0 0 {name=x11  }
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -430 -390 0 0 {name=x12  }
-C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -330 -970 0 0 {name=xp1[5:0] }
-C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -70 -970 0 1 {name=xp2[5:0] }
+C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -330 -970 0 0 {name=xp1[19:0] }
+C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -70 -970 0 1 {name=xp2[19:0] }
 C {devices/ipin.sym} -670 -1340 0 0 {name=p1 lab=VDD_1V8}
 C {devices/lab_pin.sym} -470 -750 0 1 {name=l2 sig_type=std_logic lab=VBN1}
 C {devices/opin.sym} 200 -1070 0 0 {name=p2 lab=VO}
@@ -352,14 +353,13 @@ C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -690 -870 0 1 {name=x10[1:0]}
 C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -290 -870 0 0 {name=x13}
 C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -90 -780 0 1 {name=x16  }
 C {devices/lab_pin.sym} -50 -780 0 1 {name=l13 sig_type=std_logic lab=PWRUP_1V8}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -330 -1290 0 0 {name=x17 }
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -70 -1290 0 1 {name=x18 }
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -330 -1290 0 0 {name=x17[1:0]}
+C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -70 -1290 0 1 {name=x18[1:0]}
 C {devices/lab_wire.sym} -200 -940 0 0 {name=l15 sig_type=std_logic lab=VS}
-C {SUN_TR_SKY130NM/SUNTR_NCHL.sym} 650 -810 0 1 {name=x20  }
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 650 -1290 0 1 {name=x21  }
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 650 -1210 0 1 {name=x22  }
-C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 420 -850 0 1 {name=x27  }
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 650 -810 0 1 {name=x20  }
+C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 650 -1290 0 1 {name=x21  }
+C {SUN_TR_SKY130NM/SUNTR_NCHL.sym} 420 -850 0 1 {name=x27  }
 C {devices/lab_wire.sym} 590 -850 0 0 {name=l16 sig_type=std_logic lab=VSTART}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 650 -1130 0 1 {name=x19  }
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 650 -1050 0 1 {name=x23  }
 C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 420 -740 0 1 {name=x5  }
+C {SUN_TR_SKY130NM/SUNTR_PCHL.sym} 650 -1210 0 1 {name=x8  }
+C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 420 -940 0 1 {name=x9  }

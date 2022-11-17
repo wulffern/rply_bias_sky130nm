@@ -19,6 +19,7 @@ print vdiff
 print v(lpo)
 print v(xdut.vr1)
 print v(xdut.vd1)
+print v(xdut.xota.vstart)
 
 echo "MEAS_END"
 

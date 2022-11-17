@@ -3,7 +3,7 @@
 .control
 
 set t_end=2u
-load {cicraw}
+load {cicname}.raw
 let k_q=boltz/echarge
 let vd_ref=k_q*(v(temp)+273.15)*ln(64)
 let r_scale = 5 + 1/8

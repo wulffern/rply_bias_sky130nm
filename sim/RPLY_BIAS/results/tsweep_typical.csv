@@ -1,0 +1,2 @@
+,offset_max,offset_min,m_temp_err_max,m_temp_err_min,vref_avg,vref_max,vref_min,name,type,time,OK
+0,1.796758,0.09628183,-16.01506,-18.77376,1.208662,1.209322,1.206966,tsweep_SchGtAttTtVt,Sch,Thu Nov 17 20:20:47 2022,False

@@ -1,20 +1,20 @@
-### Summary tsweep_etc
+### Summary tsweep_typical
 
-For details see <a href='tsweep_etc.html'>tsweep_etc.html</a>
+For details see <a href='tsweep_typical.html'>tsweep_typical.html</a>
 
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
 |OTA input offset|offset\_max | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
-| | | Sch|-0.35 mV | 2.86 mV | 50.58 mV |
+| | | Sch|1.80 mV | 1.80 mV | 1.80 mV |
 |OTA input offset|offset\_min | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
-| | | Sch|-1.48 mV | -0.73 mV | 0.11 mV |
+| | | Sch|0.10 mV | 0.10 mV | 0.10 mV |
 |Temperature Error|m\_temp\_err\_max | Spec | -12.00 C | 0.00 C | -4.00 C |
-| | | Sch|-8.64 C | -2.55 C | 116.63 C |
+| | | Sch|-16.02 C | -16.02 C | -16.02 C |
 |Temperature Error|m\_temp\_err\_min | Spec | -12.00 C | 0.00 C | -4.00 C |
-| | | Sch|-11.73 C | -7.50 C | -4.11 C |
+| | | Sch|-18.77 C | -18.77 C | -18.77 C |
 |T_OP voltage (VREF)|vref\_avg | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.220 V | 1.230 V | 1.254 V |
+| | | Sch|1.209 V | 1.209 V | 1.209 V |
 |T_OP voltage (VREF)|vref\_max | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.227 V | 1.236 V | 1.456 V |
+| | | Sch|1.209 V | 1.209 V | 1.209 V |
 |T_OP voltage (VREF)|vref\_min | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.218 V | 1.223 V | 1.229 V |
+| | | Sch|1.207 V | 1.207 V | 1.207 V |

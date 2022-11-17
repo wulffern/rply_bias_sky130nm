@@ -12,25 +12,25 @@ test:
 	${MAKE} typical OPT="Debug"
 
 typical: netlist
-	cicsim run --runname typical ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
+	cicsim run --name typical ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
 slow: netlist
-	cicsim run --runname slow ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
+	cicsim run --name slow ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
 fast: netlist
-	cicsim run --runname fast ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
+	cicsim run --name fast ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs: netlist
-	cicsim run --runname tfs ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" "Vt,Vl,Vh"
+	cicsim run --name tfs ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --runname etc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
+	cicsim run --name etc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
 
 mc: netlist
-	cicsim run --runname mc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
+	cicsim run --name mc --count 5 ${TB} ${OPT} ${VIEW} Gt "Amctt" "Tt" "Vt"
 
 ntc: netlist
-	cicsim run --runname ntc ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
+	cicsim run --name ntc ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp: netlist
 	cicsim run ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
@@ -44,6 +44,13 @@ etcall:
 	${MAKE} etc TB=tran OPT=${OPT}
 	${MAKE} etc TB=lstb OPT=${OPT}
 	${MAKE} etc TB=tsweep OPT=${OPT}
+
+mcall:
+	${MAKE} mc TB=tran OPT=${OPT}
+	${MAKE} mc TB=lstb OPT=${OPT}
+	${MAKE} mc TB=tsweep OPT=${OPT}
+
+all: tfsall etcall mcall
 
 clean:
 	-rm -rf output_*
