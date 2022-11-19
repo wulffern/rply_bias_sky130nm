@@ -12,36 +12,45 @@ test:
 	${MAKE} typical OPT="Debug"
 
 typical: netlist
-	cicsim run --name typical ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Att Tt Vt
 
 slow: netlist
-	cicsim run --name slow ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Ass "Th,Tl" Vl
 
 fast: netlist
-	cicsim run --name fast ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Aff "Th,Tl" Vh
 
 tfs: netlist
-	cicsim run --name tfs ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" "Vt,Vl,Vh"
+	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --name etc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Th,Tl" "Vl,Vh"
 
 etcnotemp: netlist
-	cicsim run --name etcnotemp ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Tt" "Vl,Vh"
+	cicsim run --name ${VIEW}_etcnotemp ${TB} ${OPT} ${VIEW} Gt "Ass,Aff,Asf,Afs" "Tt" "Vl,Vh"
 
 mc: netlist
-	cicsim run --name mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Amctt" "Tt" "Vt"
+	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Amctt" "Tt" "Vt"
 
 ntc: netlist
-	cicsim run --name ntc ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
+	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Att,Ass,Aff" "Tt" Vt
 
 temp: netlist
-	cicsim run --name temp ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
+	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Att" "Tt,Th,Tl" Vt
+
+summary:
+	cicsim summary --output "README.md"
 
 tfsall:
+
 	${MAKE} tfs TB=tran OPT=${OPT}
 	${MAKE} tfs TB=lstb OPT=${OPT}
 	${MAKE} tfs TB=tsweep OPT=${OPT}
+
+typall:
+	${MAKE} typical TB=tran OPT=${OPT}
+	${MAKE} typical TB=lstb OPT=${OPT}
+	${MAKE} typical TB=tsweep OPT=${OPT}
 
 etcall:
 	${MAKE} etc TB=tran OPT=${OPT}
@@ -55,7 +64,7 @@ mcall:
 	${MAKE} mc TB=lstb OPT=${OPT}
 	${MAKE} mc TB=tsweep OPT=${OPT}
 
-all: etcall etcnotempall mcall
+all: typall etcall etcnotempall mcall summary
 
 clean:
 	-rm -rf output_*

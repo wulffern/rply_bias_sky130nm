@@ -22,9 +22,6 @@ offset:
 ibp:
   src:
     - ibp_1u_0
-    - ibp_1u_1
-    - ibp_1u_2
-    - ibp_1u_3
   name: Bias current
   typ: 1
   min: 0.8
@@ -77,7 +74,7 @@ vref:
   src:
     - vref
   name: T_OP voltage (VREF)
-  typ: 1.22
+  typ: 1.2
   min: -2%
   max: 2%
   digits: 3

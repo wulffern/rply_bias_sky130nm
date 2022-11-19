@@ -1,0 +1,51 @@
+description: |
+  # RPLY_BIAS
+  Electrical verification of the top level bias block
+
+  To run all simulations do "make all"
+
+simulations:
+  lstb:
+    name: Loop stability analysis
+    description: |
+      Uses Tian/Middelbrook to check the phase-margin of the RPLY_BIAS circuit
+    data:
+      - name: Sch_typ
+        src: results/lstb_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/lstb_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/lstb_Sch_mc
+        method: 3std
+
+  tran:
+    name: Transient analysis
+    description: |
+      Check transient operation, and make sure it starts up
+    data:
+      - name: Sch_typ
+        src: results/tran_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/tran_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/tran_Sch_mc
+        method: 3std
+
+  tsweep:
+    name: Temperature sweep
+    description: |
+      Temperature sweep to check vref accuracy variation with temperature
+    data:
+      - name: Sch_typ
+        src: results/tsweep_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/tsweep_Sch_etcnotemp
+        method: minmax
+      - name: Sch_3std
+        src: results/tsweep_Sch_mc
+        method: 3std

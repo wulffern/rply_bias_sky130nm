@@ -39,7 +39,7 @@ unityGain:
   src: ug
   name: Unity Gain Frequency
   typ: 1.5
-  min: 5
+  min: 4
   max: 20
   scale: 1e-6
   unit: "MHz"
