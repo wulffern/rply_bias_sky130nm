@@ -24,8 +24,8 @@ or [The Bandgap Reference - A Circuit for All Seasons](https://ieeexplore.ieee.o
 
 | What            | Lib/Folder       | Cell/Name |
 | :-              | :-:              | :-:       |
-| Schematic       | RPLY_BIAS_SKY130NM | RPLY_BIAS |
-| Layout          | RPLY_BIAS_SKY130NM | RPLY_BIAS |
+| Schematic       | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
+| Layout          | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
 | LPE             | RPLY_BIAS_SKY130NM | RPLY_BIAS |
 
 
@@ -100,3 +100,7 @@ Current mirror OTA with NMOS input. Includes a startup circuit for the bandgap t
 there is no bias current.
 
 
+# TODO
+(-) fix monte-carlo variation
+(-) fix failing corners
+(-) Check if the calculation of deltaVd should be referred to the reference voltage?
