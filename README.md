@@ -18,8 +18,6 @@ See chapter 7.3.2 in Carusone, Johns, Martin; "Analog Integrated Circuit Design"
 or [The Bandgap Reference - A Circuit for All Seasons](https://ieeexplore.ieee.org/document/7559954)
 
 
-
-
 # What
 
 | What            | Lib/Folder       | Cell/Name |
@@ -48,7 +46,7 @@ or [The Bandgap Reference - A Circuit for All Seasons](https://ieeexplore.ieee.o
 # Key parameters
 | Parameter   | Min | Typ           | Max | Unit |
 |:------------|:---:|:-------------:|:---:|:----:|
-| Technology  |     | GF130NBCDLite |     |      |
+| Technology  |     | Skywater 130 nm |     |      |
 | VDD_1V8     | 1.7 | 1.8           | 1.9 | V    |
 | IBP_1U      |     |               |     |      |
 | T_OP        |     | 1.2           |     | V    |
@@ -99,8 +97,3 @@ is adjusted to create a constant voltage over temperature
 Current mirror OTA with NMOS input. Includes a startup circuit for the bandgap to ensure that the output voltage will start at zero if 
 there is no bias current.
 
-
-# TODO
-(-) fix monte-carlo variation
-(-) fix failing corners
-(-) Check if the calculation of deltaVd should be referred to the reference voltage?

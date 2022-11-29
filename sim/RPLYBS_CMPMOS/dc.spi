@@ -1,0 +1,93 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/RPLYBS_CMPMOS_lpe.spi
+#else
+.include ../../../work/xsch/RPLYBS_CMPMOS.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8 0   dc {AVDD}
+VPWR PWRUP_1V8 0 dc {AVDD}
+VPWRN PWRUP_N_1V8 0 dc 0
+
+
+
+I1 IBP_G 0 dc {3u}
+V1 IBP_A IBP_G dc 0
+
+V2 IBP_B 0 dc 1.2
+V3 IBP_1U_A 0 dc 1.2
+V4 IBP_2U 0 dc 1.2
+V5 IBP_1U_0 0 dc 1.2
+V6 IBP_1U_1 0 dc 1.2
+V7 IBP_1U_2 0 dc 1.2
+V8 IBP_1U_3 0 dc 1.2
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT VDD_1V8 VSS IBP_1U_3,IBP_1U_2,IBP_1U_1,IBP_1U_0 IBP_1U_A IBP_2U IBP_A
++ IBP_B IBP_G PWRUP_1V8 PWRUP_N_1V8 RPLYBS_CMPMOS
+
+*----------------------------------------------------------------
+* MEASURES
+*----------------------------------------------------------------
+
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+#ifdef Debug
+.save all
+#else
+.save i(V1)
+.save i(V2)
+.save i(V3)
+.save i(V4)
+.save i(V5)
+.save i(V6)
+.save i(V7)
+.save i(V8)
+.save v(xdut.vc) v(xdut.vps_1) v(xdut.vstart)
+.save v(VDD_1V8) v(VSS) v(IBP_1U_3) v(IBP_1U_2) v(IBP_1U_1) v(IBP_1U_0) v(IBP_1U) v(IBP_2U) v(IBP_A) v(IBP_B) v(IBP_G)
+#endif
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 100p 10n 0
+
+dc I1 10u 24u 1u
+
+write
+
+quit
+
+.endc
+
+.end

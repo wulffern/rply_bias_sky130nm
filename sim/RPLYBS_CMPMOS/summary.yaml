@@ -1,0 +1,19 @@
+description: RPLYBS_CMPMOS - Main current mirror in bandgap
+simulations:
+   dc:
+    name: DC analysis
+    description: |
+      Check dc
+    data:
+      - name: Sch_typ
+        src: results/dc_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/dc_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/dc_Sch_mc
+        method: 3std
+      - name: Sch_1std
+        src: results/dc_Sch_mc
+        method: std

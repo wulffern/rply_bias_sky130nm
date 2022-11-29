@@ -20,7 +20,7 @@ let w_temp_err = w_temp-w_temp_ref
 meas dc m_temp_err_max MAX w_temp_err
 meas dc m_temp_err_min MIN w_temp_err
 
-meas dc vstart_max MAX v(xdut.xota.vstart)
+meas dc vstart_max MAX v(xdut.xcm.vstart)
 
 meas dc vref_typ find v(t_op) at=25
 meas dc vref_max MAX v(t_op)
@@ -47,7 +47,6 @@ meas dc ibpsr_3 find i(V3) at=25
 meas dc v(xdut.vd1) find v(xdut.vd1) at=25
 meas dc v(xdut.vr1) find v(xdut.vr1) at=25
 
-*TODO: Fix cicsim, does not seem like it catches errors in meas run
 
 write {cicname}_meas.raw
 

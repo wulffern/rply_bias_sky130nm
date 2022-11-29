@@ -1,0 +1,27 @@
+* Measure RPLYBS_CMPMOS
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+set target = 16u
+
+let vds_ibp_a = v(vdd_1v8)-v(xdut.vps_1)
+let vds_ibp_0 = v(xdut.vps_1) - v(ibp_1u_0)
+
+meas dc vds_ibp_a find vds_ibp_a at=$target
+meas dc vds_ibp_0 find vds_ibp_0 at=$target
+
+meas dc ibp_a find i(V1) at=$target
+meas dc ibp_b find i(V2) at=$target
+meas dc ibp_1u find i(V3) at=$target
+meas dc ibp_2u find i(V4) at=$target
+meas dc ibp_0 find i(V5) at=$target
+meas dc ibp_1 find i(V6) at=$target
+meas dc ibp_2 find i(V7) at=$target
+meas dc ibp_3 find i(V8) at=$target
+
+
+echo "MEAS_END"
+.endc
