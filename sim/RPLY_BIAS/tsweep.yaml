@@ -10,25 +10,27 @@ offset:
   scale: 1e3
   unit: mV
 
-temperr:
+ibp:
   src:
-    - m_temp_err_max
-    - m_temp_err_min
-  name: Temperature Error
-  typ: 0
-  min: -12
-  max: -4
-  scale: 1
-  unit: "C"
-
-vref:
-  src:
-    - vref_avg
-    - vref_max
-    - vref_min
-  name: T_OP voltage (VREF)
-  typ: 1.2
-  min: -2%
-  max: 2%
+    - ibp
+  name: Current at 25C
+  typ: 3
+  max: 10%
+  min: -10%
   digits: 3
+  scale: 1e6
+  unit: uA
+
+
+tempco:
+  src:
+    - ibp_max_ppm_c
+    - ibp_typ_ppm_c
+    - ibp_min_ppm_c
+  name: Temp Coefficient
+  typ: 3000
+  max: 20%
+  min: -20%
+  digits: 1
   scale: 1
+  unit: ppm/C

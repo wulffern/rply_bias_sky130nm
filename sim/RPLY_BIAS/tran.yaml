@@ -22,10 +22,13 @@ offset:
 ibp:
   src:
     - ibp_1u_0
+    - ibp_1u_1
+    - ibp_1u_2
+    - ibp_1u_3
   name: Bias current
-  typ: 1
-  min: 0.8
-  max: 2
+  typ: 0.78
+  min: -30%
+  max: 40%
   scale: 1e6
   unit: "uA"
 
@@ -48,34 +51,3 @@ ipwrdwn:
   max: 10
   scale: -1e9
   unit: "nA"
-
-
-temp:
-  src:
-    - m_temp
-  name: Estimated temperature
-  typ: 27
-  min: -50
-  max: 130
-  scale: 1
-  unit: "C"
-
-temperr:
-  src:
-    - m_temp_err
-  name: Estimated temperature error
-  typ: 0
-  min: -4
-  max: 4
-  scale: 1
-  unit: "C"
-
-vref:
-  src:
-    - vref
-  name: T_OP voltage (VREF)
-  typ: 1.2
-  min: -2%
-  max: 2%
-  digits: 3
-  scale: 1

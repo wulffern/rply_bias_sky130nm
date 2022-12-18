@@ -49,7 +49,7 @@ X999 LPI LPO loopgainprobe
 * DUT
 *-----------------------------------------------------------------
 XDUT VDD_1V8 VSS PWRUP_1V8 LPI LPO
-+ IBP_1U<3>,IBP_1U<2>,IBP_1U<1>,IBP_1U<0> T_OP T_ON RPLY_BIAS
++ IBP_1U<3>,IBP_1U<2>,IBP_1U<1>,IBP_1U<0>  RPLY_BIAS
 
 *-----------------------------------------------------------------
 * STASH

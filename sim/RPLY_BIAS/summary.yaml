@@ -19,6 +19,9 @@ simulations:
       - name: Sch_3std
         src: results/lstb_Sch_mc
         method: 3std
+      - name: Sch_std
+        src: results/lstb_Sch_mc
+        method: std
 
   tran:
     name: Transient analysis
@@ -34,6 +37,9 @@ simulations:
       - name: Sch_3std
         src: results/tran_Sch_mc
         method: 3std
+      - name: Sch_std
+        src: results/tran_Sch_mc
+        method: std
 
   tsweep:
     name: Temperature sweep
@@ -49,3 +55,6 @@ simulations:
       - name: Sch_3std
         src: results/tsweep_Sch_mc
         method: 3std
+      - name: Sch_std
+        src: results/tsweep_Sch_mc
+        method: std

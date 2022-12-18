@@ -5,16 +5,14 @@ For details see <a href='tsweep_Sch_mc.html'>tsweep_Sch_mc.html</a>
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
 |OTA input offset|offset\_max | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
-| | | Sch|-14.78 mV | 0.29 mV | 19.55 mV |
+| | | Sch|-17.04 mV | -1.55 mV | 18.22 mV |
 |OTA input offset|offset\_min | Spec | -10.00 mV | 0.00 mV | 10.00 mV |
-| | | Sch|-15.46 mV | -1.20 mV | 13.70 mV |
-|Temperature Error|m\_temp\_err\_max | Spec | -12.00 C | 0.00 C | -4.00 C |
-| | | Sch|-39.64 C | 19.25 C | 75.80 C |
-|Temperature Error|m\_temp\_err\_min | Spec | -12.00 C | 0.00 C | -4.00 C |
-| | | Sch|-51.11 C | 10.00 C | 66.45 C |
-|T_OP voltage (VREF)|vref\_avg | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.114 V | 1.217 V | 1.311 V |
-|T_OP voltage (VREF)|vref\_max | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.115 V | 1.220 V | 1.312 V |
-|T_OP voltage (VREF)|vref\_min | Spec | 1.202 V | 1.220 V | 1.238 V |
-| | | Sch|1.107 V | 1.213 V | 1.309 V |
+| | | Sch|-19.69 mV | -5.05 mV | 14.96 mV |
+|Current|ibp | Spec | 2.000 uA | 3.000 uA | 4.000 uA |
+| | | Sch|2.090 uA | 3.070 uA | 4.161 uA |
+|Temp Coefficient|ibp\_max\_ppm\_c | Spec | 2500.0 ppm/C | 3000.0 ppm/C | 3500.0 ppm/C |
+| | | Sch|2371.5 ppm/C | 3640.5 ppm/C | 5117.0 ppm/C |
+|Temp Coefficient|ibp\_typ\_ppm\_c | Spec | 2500.0 ppm/C | 3000.0 ppm/C | 3500.0 ppm/C |
+| | | Sch|1990.8 ppm/C | 3143.0 ppm/C | 4580.2 ppm/C |
+|Temp Coefficient|ibp\_min\_ppm\_c | Spec | 2500.0 ppm/C | 3000.0 ppm/C | 3500.0 ppm/C |
+| | | Sch|1489.5 ppm/C | 2665.5 ppm/C | 3980.0 ppm/C |

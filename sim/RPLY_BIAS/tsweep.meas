@@ -2,33 +2,20 @@
 
 .control
 
+set typ_index = 13
+
 load {cicname}.raw
 let k_q=boltz/echarge
 let vd_ref=k_q*(v(temp)+273.15)*ln(64)
-let r_scale = 4.5
+let vd_ref_1p = vd_ref - vd_ref[$typ_index]
 
 let v-sweep=v(temp)
 
 echo "MEAS_START"
 
-* Calculate temperature error
-let w_diff = v(t_op)-v(t_on)
-let w_temp=w_diff/(k_q*ln(64)*r_scale) - 273.15
-let w_temp_ref = v(temp)
-let w_temp_err = w_temp-w_temp_ref
-
-meas dc m_temp_err_max MAX w_temp_err
-meas dc m_temp_err_min MIN w_temp_err
-
 meas dc vstart_max MAX v(xdut.xcm.vstart)
 
-meas dc vref_typ find v(t_op) at=25
-meas dc vref_max MAX v(t_op)
-meas dc vref_avg AVG v(t_op)
-meas dc vref_min MIN v(t_op)
-
-
-* Get currents
+* Get offset
 let w_offset = v(xdut.vr1)-v(xdut.vd1)
 meas dc offset_max MAX w_offset
 meas dc offset_min MIN w_offset
@@ -39,14 +26,12 @@ meas dc dvderr_max MAX d_vd_err
 meas dc dvderr_min MIN d_vd_err
 
 
-meas dc ibpsr_0 find i(V0) at=25
-meas dc ibpsr_1 find i(V1) at=25
-meas dc ibpsr_2 find i(V2) at=25
-meas dc ibpsr_3 find i(V3) at=25
+
+* Get current
+meas dc ibp find i(V0) at=25
 
 meas dc v(xdut.vd1) find v(xdut.vd1) at=25
 meas dc v(xdut.vr1) find v(xdut.vr1) at=25
-
 
 write {cicname}_meas.raw
 

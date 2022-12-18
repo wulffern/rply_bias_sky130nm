@@ -43,7 +43,7 @@ VLST LPI LPO dc 0
 * DUT
 *-----------------------------------------------------------------
 XDUT VDD_1V8 VSS PWRUP_1V8 LPI LPO
-+ IBP_1U<3>,IBP_1U<2>,IBP_1U<1>,IBP_1U<0> T_OP T_ON RPLY_BIAS
++ IBP_1U<3>,IBP_1U<2>,IBP_1U<1>,IBP_1U<0> RPLY_BIAS
 
 *-----------------------------------------------------------------
 * STASH
@@ -72,10 +72,7 @@ B5 temp 0 v=temper
 .save v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U)
 + v(XDUT.VD1) v(XDUT.VD2) v(XDUT.VR1) v(D_VD) v(D_VD_REF) v(D_VD_ERR)
 + v(V_OFF) i(VDD)
-*+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
-+ v(t_op) v(t_on)
-+ v(xdut.xota.vstarted)
-+ v(xdut.xota.vstart)
++ v(xdut.xcm.vstart)
 + v(temp)
 .save  i(v0)
 .save  i(v1)
@@ -94,7 +91,7 @@ set color0=white
 set color1=black
 unset askquit
 
-tran 10n 2.1u 1n
+tran 10n 2.5u 1n
 
 write
 #ifdef Debug
