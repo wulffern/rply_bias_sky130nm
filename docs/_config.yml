@@ -25,9 +25,11 @@ github_username: wulffern
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+remote-theme: jekyll/minima
 plugins:
   - jekyll-feed
+  - jemoji
 
 minima:
   skin: auto
