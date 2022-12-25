@@ -1,5 +1,5 @@
 ---
-layout:home
+layout: home
 ---
 
 [![docs](https://github.com/wulffern/rply_bias_sky130nm/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/rply_bias_sky130nm)
