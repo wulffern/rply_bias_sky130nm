@@ -40,6 +40,11 @@ temp: netlist
 
 summary:
 	cicsim summary --output "README.md"
+	${MAKE} post
+
+DATE=${shell date +%Y-%m-%d}
+post:
+	cp README.md ../../docs/_posts/${DATE}-RPLY_BIAS.markdown
 
 tfsall:
 

@@ -1,5 +1,11 @@
 description: |
-  # RPLY_BIAS
+  ---
+  layout: post
+  title: RPLY_BIAS simulation
+  categories: sim
+  permalink: posts/rply_bias_sch
+  ---
+
   Electrical verification of the top level bias block
 
   To run all simulations do "make all"
@@ -8,7 +14,9 @@ simulations:
   lstb:
     name: Loop stability analysis
     description: |
+
       Uses Tian/Middelbrook to check the phase-margin of the RPLY_BIAS circuit
+
     data:
       - name: Sch_typ
         src: results/lstb_Sch_typical
@@ -26,7 +34,9 @@ simulations:
   tran:
     name: Transient analysis
     description: |
+
       Check transient operation, and make sure it starts up
+
     data:
       - name: Sch_typ
         src: results/tran_Sch_typical
@@ -44,7 +54,9 @@ simulations:
   tsweep:
     name: Temperature sweep
     description: |
+
       Temperature sweep to check vref accuracy variation with temperature
+
     data:
       - name: Sch_typ
         src: results/tsweep_Sch_typical
