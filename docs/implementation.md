@@ -4,7 +4,6 @@ title: Implementation
 permalink: impl
 ---
 
-# Implementation
 
 ## RPLY_BIAS
 Top level. Two bipolars biased at different current density to create two different diode voltages. The difference in the diode
