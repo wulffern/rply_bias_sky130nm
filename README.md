@@ -1,5 +1,6 @@
-
-# RPLY_BIAS_SKY130N
+---
+layout:home
+---
 
 [![docs](https://github.com/wulffern/rply_bias_sky130nm/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://wulffern.github.io/rply_bias_sky130nm)
 
@@ -23,20 +24,21 @@ or [The Bandgap Reference - A Circuit for All Seasons](https://ieeexplore.ieee.o
 
 # What
 
-| What            | Lib/Folder       | Cell/Name |
-| :-              | :-:              | :-:       |
-| Schematic       | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
-| Layout          | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
-| LPE             | RPLY_BIAS_SKY130NM | RPLY_BIAS |
+| What      | Lib/Folder                | Cell/Name |
+|:----------|:-------------------------|:---------|
+| Schematic | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
+| Layout    | design/RPLY_BIAS_SKY130NM | RPLY_BIAS |
 
 
 # Changelog/Plan
+
 | Version | Status | Comment|
 | :-| :-| :-|
 |0.1.0 | :x: | Make something |
 
 
 # Signal interface
+
 | Signal       | Direction | Domain  | Description                             |
 |:-------------|:---------:|:-------:|:----------------------------------------|
 | VDD_1V8      | Input     | VDD_1V8 | Main supply                             |
@@ -45,6 +47,7 @@ or [The Bandgap Reference - A Circuit for All Seasons](https://ieeexplore.ieee.o
 | IBPS_1U[3:0] | Output    | VDD_1V8 | PTAT bias current                       |
 
 # Key parameters
+
 | Parameter   | Min | Typ           | Max | Unit |
 |:------------|:---:|:-------------:|:---:|:----:|
 | Technology  |     | Skywater 130 nm |     |      |
