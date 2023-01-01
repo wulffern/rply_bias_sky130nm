@@ -1,0 +1,123 @@
+{
+    "cells":
+    [
+        { "name" : "PCHCM",
+          "meta" : {
+              "symbol" : "pch"
+          },
+          "class" : "LayoutCell",
+          "noPowerRoute" : 1,
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","D","-|--"],
+                  ["M1","G","||"]
+              ]
+          },
+          "afterRoute"  : {
+               "addPortOnRects" : [  ["B","M1", "X1:B"]]
+           }
+        },
+        { "name" : "NCHCM",
+          "leech" : "PCHCM",
+          "meta" : {
+              "symbol" : "nch"
+          }
+        },
+        { "name" : "PCHA",
+          "meta" : {
+              "symbol" : "pch"
+          },
+          "class" : "LayoutCell",
+          "noPowerRoute" : 1,
+          "beforeRoute" : {
+              "addConnectivityRoutes" : [
+                  ["M1","D","-|--"],
+                  ["M1","G","||"],
+                  ["M1","S","--|-","noSpace"]
+              ]
+          },
+           "afterRoute"  : {
+               "addPortOnRects" : [  ["B","M1", "X1:B"]]
+           }
+        },
+        { "name" : "PCM",
+          "meta" : {
+
+          },
+          "class" : "LayoutCell",
+          "noPowerRoute" : 1,
+
+          "beforeRoute" : {
+              "addDirectedRoutes" : [
+                  ["M1","AVDD","X1DMY:S->X1DMY:B"],
+                  ["M1","AVDD","X1DMY:S->X1DMY:G"],
+                  ["M1","AVDD","X1DMY:D->X1DMY:G"],
+                  ["M1","AVDD","X1SW:S->X1SW:B"]
+              ],
+              "addConnectivityRoutes" : [
+                  ["M1","V(C|B)P","||"],
+                  ["M1","DCM","-|--"],
+                  ["M1","PWRUP_N","||"],
+                  ["M1","SW","-|--"],
+                  ["M2","OUT","||","routeWidth=wide"]
+              ]
+          },
+           "afterRoute"  : {
+               "addPortOnRects" : [  ["AVDD","M1", "X1SW:S"]]
+           }
+        },
+        { "name" : "PMIRR",
+          "meta" : {
+              "symbol" : "PMIRR"
+          },
+          "class" : "LayoutCell",
+          "boundaryIgnoreRouting" : 0,
+          "noPowerRoute" : 1,
+          "placeHorizontal" : 1,
+          "afterPlace" : [
+              {"addRouteRings" :[
+                  ["M3","VBP","b",2,4],
+                  ["M3","VCP","t",2,4],
+                  ["M1","AVDD","trbl",5,4],
+                  ["M3","IBP_A","t",2,4],
+                  ["M3","IBP_B","t",2,4],
+                  ["M3","IBP_1U<4:0>","t",2,1]
+
+              ]}
+          ],
+          "beforeRoute" : [
+              {"addDirectedRoutes" : [
+                  ["M1","AVDD","rail_b_AVDD--X:X:B","strap,vertical,routeWidth=rail"]
+              ]},
+              {"addConnectivityRoutes" : [
+                  ["M3","PWRUP_N","-|--",""]
+              ]},
+              {"addGuard" : [ "VSS", 2 , ["PTAP"] ]},
+              {"addRouteConnections" : [
+                  ["VCP","","top","M2",""],
+                  ["VBP","","bottom","M4",""],
+                  ["IBP","","top","M2","routeWidth=wide"]
+              ]
+              }
+
+          ],
+          "afterRoute" : {
+              "trimRouteRing" : ["IBP","top","lr"],
+              "addPortOnRects" : [
+                  ["VCP","M1", "rail_t_VCP"],
+                  ["VBP","M1", "rail_b_VBP"]
+              ]
+
+          },
+          "afterPaint" :{
+                "resetOrigin" : 1,
+                 "addPortOnEdges" :[
+                     ["M3","PWRUP_N","left","--|-",""],
+                     ["M3","VCP","left","--|-",""],
+                     ["M3","VBP","left","--|-",""]
+                 ]
+            }
+        }
+    ]
+
+}

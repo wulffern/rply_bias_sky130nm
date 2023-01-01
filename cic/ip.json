@@ -1,0 +1,13 @@
+{
+	"options" :
+	{
+		"ignoreSetYoffsetHalf" : false,
+		"prefix" : "RPLYBS_"
+	},
+	"include" : [
+		"transistors.json",
+		"cm.json"
+
+	],
+    "cells" : []
+}
