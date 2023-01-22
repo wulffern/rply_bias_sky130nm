@@ -69,7 +69,7 @@ mcall:
 	${MAKE} mc TB=lstb OPT=${OPT}
 	${MAKE} mc TB=tsweep OPT=${OPT}
 
-all: typall etcall etcnotempall mcall summary
+all: typall etcall etcnotempall mcall summary post
 
 clean:
 	-rm -rf output_*
