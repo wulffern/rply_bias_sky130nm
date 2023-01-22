@@ -222,3 +222,5 @@ C {devices/lab_wire.sym} 80 -750 0 1 {name=l17 sig_type=std_logic lab=VBN
 C {RPLY_BIAS_SKY130NM/RPLYBS_NCHCM.sym} -470 0 0 0 {name=x4[3:0]}
 C {RPLY_BIAS_SKY130NM/RPLYBS_NCHCM.sym} -530 0 0 1 {name=x5 }
 C {RPLY_BIAS_SKY130NM/RPLYBS_NCHCM.sym} -280 -60 0 0 {name=x1[1:0]}
+C {devices/lab_wire.sym} -230 -310 0 1 {name=l4 sig_type=std_logic lab=VDD_1V8
+}
