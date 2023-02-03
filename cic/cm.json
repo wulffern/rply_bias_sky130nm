@@ -112,7 +112,7 @@
           "afterPaint" :{
                 "resetOrigin" : 1,
                  "addPortOnEdges" :[
-                     ["M3","PWRUP_N","left","--|-",""],
+                     ["M3","PWRUP_N","left","--|-","nostartcut"],
                      ["M3","VCP","left","--|-",""],
                      ["M3","VBP","left","--|-",""]
                  ]

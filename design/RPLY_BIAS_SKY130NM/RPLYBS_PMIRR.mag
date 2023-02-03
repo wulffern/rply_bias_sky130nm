@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1672527600
+timestamp 1675206000
 << checkpaint >>
 rect 0 0 48504 22152
 << m2 >>
@@ -263,8 +263,11 @@ rect 45528 336 45744 18216
 rect 16 16 48488 128
 rect 128 16 48376 128
 rect 128 22024 48376 22136
+rect 16 22024 48488 22136
 rect 16 128 128 22024
+rect 16 16 128 22136
 rect 48376 128 48488 22024
+rect 48376 16 48488 22136
 rect 16 16 48488 128
 rect 36384 11968 37104 12056
 << ptapc >>
@@ -2593,9 +2596,6 @@ box 45096 2640 45296 2716
 use RPLYBS_cut_M1M3_2x1 
 transform 1 0 47040 0 1 2640
 box 47040 2640 47240 2716
-use RPLYBS_cut_M1M3_2x1 
-transform 1 0 2344 0 1 2640
-box 2344 2640 2544 2716
 << labels >>
 flabel m2 s 0 924 46656 1076 0 FreeSans 400 0 0 0 VBP
 port 1 nsew
