@@ -25,6 +25,7 @@ let d_vd_err = d_vd - vd_ref
 meas dc dvderr_max MAX d_vd_err
 meas dc dvderr_min MIN d_vd_err
 
+write {cicname}_meas.raw
 
 
 * Get current
@@ -33,7 +34,6 @@ meas dc ibp find i(V0) at=25
 meas dc v(xdut.vd1) find v(xdut.vd1) at=25
 meas dc v(xdut.vr1) find v(xdut.vr1) at=25
 
-write {cicname}_meas.raw
 
 echo "MEAS_END"
 

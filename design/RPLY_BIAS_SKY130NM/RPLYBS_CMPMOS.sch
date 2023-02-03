@@ -166,7 +166,7 @@ lab=IBP_1U_A}
 N -390 -730 -90 -730 {
 lab=VC}
 N -120 -680 -90 -680 {
-lab=#net4}
+lab=VSTART}
 N -110 -800 -90 -800 {
 lab=VDD_1V8}
 N -110 -840 -110 -800 {
@@ -216,3 +216,4 @@ C {RPLY_BIAS_SKY130NM/RPLYBS_PMIRR.sym} -70 -810 0 0 {name=x5 }
 C {RPLY_BIAS_SKY130NM/RPLYBS_PCHCM.sym} -530 -530 0 1 {name=x6 }
 C {RPLY_BIAS_SKY130NM/RPLYBS_PCHCM.sym} -390 -690 0 1 {name=x7 }
 C {RPLY_BIAS_SKY130NM/RPLYBS_PCHCM.sym} -390 -770 0 1 {name=x8 }
+C {devices/lab_wire.sym} -120 -680 0 0 {name=l4 sig_type=std_logic lab=VSS}

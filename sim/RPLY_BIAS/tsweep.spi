@@ -63,9 +63,6 @@ XDUT VDD_1V8 VSS PWRUP_1V8 LPI LPO
 * STASH
 *-----------------------------------------------------------------
 
-*V3 IBP_1U<3> 0 dc {AVDD/2}
-*V2 IBP_1U<2> 0 dc {AVDD/2}
-*V1 IBP_1U<1> 0 dc {AVDD/2}
 V0 IBP_1U 0 dc {AVDD/2}
 
 * Save temperature to transient
@@ -129,7 +126,7 @@ set color1=black
 unset askquit
 
 
-optran 0 0 0 100n 4u 0
+optran 0 0 0 500n 4u 0
 dc TEMP -40 125 5
 
 write

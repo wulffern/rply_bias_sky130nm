@@ -1,1 +1,280 @@
-../tech/cicsim/cicsim.yaml
+
+simulator: ngspice
+
+variable:
+  CPDK_NGPICE: ../../../
+
+
+corner:
+  Gt: |
+    *Nothing here
+
+# Temperature corners
+  Tt: |
+    .lib "../../../tech/ngspice/temperature.spi" Tt
+  Tl: |
+    .lib "../../../tech/ngspice/temperature.spi" Tl
+  Th: |
+    .lib "../../../tech/ngspice/temperature.spi" Th
+
+# Voltage corners
+  Vt: |
+    .lib "../../../tech/ngspice/supply.spi" Vt
+  Vl: |
+    .lib "../../../tech/ngspice/supply.spi" Vl
+  Vh: |
+    .lib "../../../tech/ngspice/supply.spi" Vh
+
+
+#- All corners
+  Att: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" tt
+  Asf: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" sf
+  Afs: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" fs
+  Aff: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" ff
+  Ass: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" ss
+  All: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" ll
+  Ahh: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" hh
+  Ahl: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" hl
+  Alh: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" lh
+  Amctt: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" tt_mm
+  Amcsf: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" sf_mm
+  Amcfs: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" fs_mm
+  Amcff: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" ff_mm
+  Amcss: |
+    .lib  "$PDK_ROOT/sky130B/libs.tech/ngspice/sky130.lib.spice" ss_mm
+
+#./genyaml process spice.yaml --prefix K --exclude "rf_(n|p)fet|fet_g5v0|fet_03v3|fet_20v0|fet_05v0|esd_nfet|_(l|h)vt"
+  Kff: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ff.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ff.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ff/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ff/specialized_cells.spice"
+  Kffmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ff.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ff.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ff/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ff/specialized_cells.spice"
+  Kfs: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__fs.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__fs.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/fs/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/fs/specialized_cells.spice"
+  Kfsmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__fs.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__fs.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/fs/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/fs/specialized_cells.spice"
+  Khh: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Khhmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Khl: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Khlmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Klh: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Klhmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Kll: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Kllmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Kmc: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=1
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/parameters/critical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/parameters/montecarlo.spice"
+  Ksf: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__sf.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__sf.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/sf/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/sf/specialized_cells.spice"
+  Ksfmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__sf.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__sf.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/sf/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/sf/specialized_cells.spice"
+  Kss: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ss.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ss.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ss/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ss/specialized_cells.spice"
+  Kssmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ss.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ss.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ss/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/ss/specialized_cells.spice"
+  Ktt: |
+    .param mc_mm_switch=0
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
+  Kttmm: |
+    .param mc_mm_switch=1
+    .param mc_pr_switch=0
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/nonfet.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/all.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    .include "$PDK_ROOT/sky130B/libs.tech/ngspice/corners/tt/specialized_cells.spice"
