@@ -1,0 +1,10 @@
+description: MC test
+simulations:
+   dc:
+    name: DC analysis
+    description: |
+      Check dc
+    data:
+      - name: Sch_std
+        src: results/dc_Sch_mc
+        method: std

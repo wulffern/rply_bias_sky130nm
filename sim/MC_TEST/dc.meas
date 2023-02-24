@@ -1,0 +1,22 @@
+* Measure RPLYBS_CMPMOS
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+* Calculate percentage
+let id_pchdla  = (i(v2)/2u-1)*100
+let id_sky_n8  = (i(v3)/2u-1)*100
+let id_sky_n1  = (i(v4)/(2u/8)-1)*100
+
+meas dc ip_pchdla find id_pchdla at=1.17
+meas dc ip_sky_n8 find id_sky_n8 at=1.17
+meas dc ip_sky_n1 find id_sky_n1 at=1.17
+
+meas dc i_pchdla find i(v2) at=1.17
+meas dc i_sky_n8 find i(v3) at=1.17
+meas dc i_sky_n1 find i(v4) at=1.17
+
+echo "MEAS_END"
+.endc

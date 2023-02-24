@@ -215,9 +215,9 @@ N 1360.0 1060.0 1380.0 1060.0{lab=AVDD}
 C {devices/lab_pin.sym} 1360.0 1060.0 0 0  {name=l88 sig_type=std_logic lab=AVDD }
 N 1360.0 1080.0 1380.0 1080.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1360.0 1080.0 0 0  {name=l89 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 0 0 0 {name=XXG05}
-N 1860.0 0.0 1880.0 0.0{lab=IBP_1U<5>}
-C {devices/lab_pin.sym} 1860.0 0.0 0 0  {name=l90 sig_type=std_logic lab=IBP_1U<5> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 0 0 0 {name=XXG05a}
+N 1860.0 0.0 1880.0 0.0{lab=VBP}
+C {devices/lab_pin.sym} 1860.0 0.0 0 0  {name=l90 sig_type=std_logic lab=VBP }
 N 1860.0 20.0 1880.0 20.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 20.0 0 0  {name=l91 sig_type=std_logic lab=VCP }
 N 1860.0 40.0 1880.0 40.0{lab=VBP}
@@ -226,9 +226,9 @@ N 1860.0 60.0 1880.0 60.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 60.0 0 0  {name=l93 sig_type=std_logic lab=AVDD }
 N 1860.0 80.0 1880.0 80.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 80.0 0 0  {name=l94 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 200.0 0 0 {name=XXG07}
-N 1860.0 200.0 1880.0 200.0{lab=IBP_1U<4>}
-C {devices/lab_pin.sym} 1860.0 200.0 0 0  {name=l95 sig_type=std_logic lab=IBP_1U<4> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 200.0 0 0 {name=XXG05}
+N 1860.0 200.0 1880.0 200.0{lab=IBP_1U<5>}
+C {devices/lab_pin.sym} 1860.0 200.0 0 0  {name=l95 sig_type=std_logic lab=IBP_1U<5> }
 N 1860.0 220.0 1880.0 220.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 220.0 0 0  {name=l96 sig_type=std_logic lab=VCP }
 N 1860.0 240.0 1880.0 240.0{lab=VBP}
@@ -237,9 +237,9 @@ N 1860.0 260.0 1880.0 260.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 260.0 0 0  {name=l98 sig_type=std_logic lab=AVDD }
 N 1860.0 280.0 1880.0 280.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 280.0 0 0  {name=l99 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 400.0 0 0 {name=XXH08}
-N 1860.0 400.0 1880.0 400.0{lab=IBP_1U<3>}
-C {devices/lab_pin.sym} 1860.0 400.0 0 0  {name=l100 sig_type=std_logic lab=IBP_1U<3> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 400.0 0 0 {name=XXG07}
+N 1860.0 400.0 1880.0 400.0{lab=IBP_1U<4>}
+C {devices/lab_pin.sym} 1860.0 400.0 0 0  {name=l100 sig_type=std_logic lab=IBP_1U<4> }
 N 1860.0 420.0 1880.0 420.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 420.0 0 0  {name=l101 sig_type=std_logic lab=VCP }
 N 1860.0 440.0 1880.0 440.0{lab=VBP}
@@ -248,9 +248,9 @@ N 1860.0 460.0 1880.0 460.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 460.0 0 0  {name=l103 sig_type=std_logic lab=AVDD }
 N 1860.0 480.0 1880.0 480.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 480.0 0 0  {name=l104 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 600.0 0 0 {name=XXI09}
-N 1860.0 600.0 1880.0 600.0{lab=IBP_1U<2>}
-C {devices/lab_pin.sym} 1860.0 600.0 0 0  {name=l105 sig_type=std_logic lab=IBP_1U<2> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 600.0 0 0 {name=XXH08}
+N 1860.0 600.0 1880.0 600.0{lab=IBP_1U<3>}
+C {devices/lab_pin.sym} 1860.0 600.0 0 0  {name=l105 sig_type=std_logic lab=IBP_1U<3> }
 N 1860.0 620.0 1880.0 620.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 620.0 0 0  {name=l106 sig_type=std_logic lab=VCP }
 N 1860.0 640.0 1880.0 640.0{lab=VBP}
@@ -259,9 +259,9 @@ N 1860.0 660.0 1880.0 660.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 660.0 0 0  {name=l108 sig_type=std_logic lab=AVDD }
 N 1860.0 680.0 1880.0 680.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 680.0 0 0  {name=l109 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 800.0 0 0 {name=XXJ10}
-N 1860.0 800.0 1880.0 800.0{lab=IBP_1U<1>}
-C {devices/lab_pin.sym} 1860.0 800.0 0 0  {name=l110 sig_type=std_logic lab=IBP_1U<1> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 800.0 0 0 {name=XXI09}
+N 1860.0 800.0 1880.0 800.0{lab=IBP_1U<2>}
+C {devices/lab_pin.sym} 1860.0 800.0 0 0  {name=l110 sig_type=std_logic lab=IBP_1U<2> }
 N 1860.0 820.0 1880.0 820.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 820.0 0 0  {name=l111 sig_type=std_logic lab=VCP }
 N 1860.0 840.0 1880.0 840.0{lab=VBP}
@@ -270,9 +270,9 @@ N 1860.0 860.0 1880.0 860.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 860.0 0 0  {name=l113 sig_type=std_logic lab=AVDD }
 N 1860.0 880.0 1880.0 880.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 880.0 0 0  {name=l114 sig_type=std_logic lab=PWRUP_N }
-C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 1000.0 0 0 {name=XXK11}
-N 1860.0 1000.0 1880.0 1000.0{lab=IBP_1U<0>}
-C {devices/lab_pin.sym} 1860.0 1000.0 0 0  {name=l115 sig_type=std_logic lab=IBP_1U<0> }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 1900 1000.0 0 0 {name=XXJ10}
+N 1860.0 1000.0 1880.0 1000.0{lab=IBP_1U<1>}
+C {devices/lab_pin.sym} 1860.0 1000.0 0 0  {name=l115 sig_type=std_logic lab=IBP_1U<1> }
 N 1860.0 1020.0 1880.0 1020.0{lab=VCP}
 C {devices/lab_pin.sym} 1860.0 1020.0 0 0  {name=l116 sig_type=std_logic lab=VCP }
 N 1860.0 1040.0 1880.0 1040.0{lab=VBP}
@@ -281,3 +281,14 @@ N 1860.0 1060.0 1880.0 1060.0{lab=AVDD}
 C {devices/lab_pin.sym} 1860.0 1060.0 0 0  {name=l118 sig_type=std_logic lab=AVDD }
 N 1860.0 1080.0 1880.0 1080.0{lab=PWRUP_N}
 C {devices/lab_pin.sym} 1860.0 1080.0 0 0  {name=l119 sig_type=std_logic lab=PWRUP_N }
+C {RPLY_BIAS_SKY130NM/RPLYBS_PCM.sym} 2400 0 0 0 {name=XXK11}
+N 2360.0 0.0 2380.0 0.0{lab=IBP_1U<0>}
+C {devices/lab_pin.sym} 2360.0 0.0 0 0  {name=l120 sig_type=std_logic lab=IBP_1U<0> }
+N 2360.0 20.0 2380.0 20.0{lab=VCP}
+C {devices/lab_pin.sym} 2360.0 20.0 0 0  {name=l121 sig_type=std_logic lab=VCP }
+N 2360.0 40.0 2380.0 40.0{lab=VBP}
+C {devices/lab_pin.sym} 2360.0 40.0 0 0  {name=l122 sig_type=std_logic lab=VBP }
+N 2360.0 60.0 2380.0 60.0{lab=AVDD}
+C {devices/lab_pin.sym} 2360.0 60.0 0 0  {name=l123 sig_type=std_logic lab=AVDD }
+N 2360.0 80.0 2380.0 80.0{lab=PWRUP_N}
+C {devices/lab_pin.sym} 2360.0 80.0 0 0  {name=l124 sig_type=std_logic lab=PWRUP_N }

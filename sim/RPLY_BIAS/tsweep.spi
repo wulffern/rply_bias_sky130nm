@@ -12,14 +12,6 @@
 #else
 .include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_CAP_10_lpe.spi
 .include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_CAP_20_lpe.spi
-.include ../../../work/lpe/RPLYBS_PMIRR_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_PCHDLCM_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_PCHL_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_PCHDL_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_NCHDLCM_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_NCHDL_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_PCHDLA_lpe.spi
-*.include ../../../../sun_tr_sky130nm/work/lpe/SUNTR_NCHL_lpe.spi
 .include ../../../work/xsch/RPLY_BIAS.spice
 #endif
 
@@ -81,8 +73,9 @@ B5 temp 0 v=temper
 #endif
 
 #ifdef Debug
-*.save all
+
 #else
+*.save all
 .save v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U) i(v1)
 + v(XDUT.VD1) v(XDUT.VD2) v(XDUT.VR1) v(D_VD) v(D_VD_REF) v(D_VD_ERR)
 + v(V_OFF) i(VDD)
@@ -90,6 +83,13 @@ B5 temp 0 v=temper
 + v(xdut.xota.vbp2)
 + v(xdut.xota.vo_ls)
 + v(xdut.ibp_2u)
++ v(xdut.vr1)
++ v(xdut.vr2)
++ v(xdut.vr3)
++ v(xdut.xcm.*)
++ v(xdut.xota.*)
++ v(xdut.pwrup_n_1v8)
++ v(xdut.pwrup_b_1v8)
 + v(xdut.xota.vs)
 + v(xdut.xota.vbp1)
 + v(xdut.xota.vbp2)
@@ -99,7 +99,9 @@ B5 temp 0 v=temper
 + v(xdut.vip)
 + v(xdut.vin)
 + v(xdut.xcm.vstart)
-+ v(xdut.xcm.vstart1)
++ v(xdut.xcm.vstarted)
++ v(xdut.xcm.vbp)
++ v(xdut.xcm.vc)
 + v(xdut.xcm.vbn)
 *+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
 + v(t_op) v(t_on)
@@ -126,7 +128,7 @@ set color1=black
 unset askquit
 
 
-optran 0 0 0 500n 4u 0
+optran 0 0 0 100n 4u 0
 dc TEMP -40 125 5
 
 write

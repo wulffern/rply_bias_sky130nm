@@ -3,52 +3,52 @@ tech sky130B
 magscale 1 2
 timestamp 1675206000
 << checkpaint >>
-rect 0 0 1944 17424
+rect 0 0 1944 11088
 << locali >>
-rect 756 10428 1248 10488
-rect 828 9812 1248 9872
-rect 1248 9812 1308 10488
 rect 756 7260 1248 7320
+rect 828 6644 1248 6704
+rect 1248 6644 1308 7320
+rect 756 4092 1248 4152
 rect 828 1100 1248 1160
-rect 1248 1100 1308 7320
+rect 1248 1100 1308 4152
 rect 108 132 324 220
-rect 108 16764 324 16852
+rect 108 10428 324 10516
 rect 324 132 1620 220
-rect 324 16764 1620 16852
+rect 324 10428 1620 10516
 rect 468 308 1620 396
-rect 468 16940 1620 17028
+rect 468 10604 1620 10692
 rect 108 924 324 1012
 rect 324 924 1188 1012
-rect 468 10604 1188 10692
-rect 1404 10780 1620 10868
+rect 468 7436 1188 7524
 rect 1404 7612 1620 7700
+rect 1404 4444 1620 4532
 rect 1404 1276 1620 1364
 use RPLYBS_PCH X1DMY0
 transform 1 0 0 0 1 0
 box 0 0 1944 792
 use RPLYBS_PCHA X1SW
 transform 1 0 0 0 1 792
-box 0 792 1944 7128
+box 0 792 1944 3960
 use RPLYBS_PCHCM X1CM
+transform 1 0 0 0 1 3960
+box 0 3960 1944 7128
+use RPLYBS_PCHA X1CA
 transform 1 0 0 0 1 7128
 box 0 7128 1944 10296
-use RPLYBS_PCHA X1CA
-transform 1 0 0 0 1 10296
-box 0 10296 1944 16632
 use RPLYBS_PCH X1DMY1
-transform 1 0 0 0 1 16632
-box 0 16632 1944 17424
+transform 1 0 0 0 1 10296
+box 0 10296 1944 11088
 use RPLYBS_cut_M1M2_2x1 
-transform 1 0 468 0 1 10604
-box 468 10604 652 10672
+transform 1 0 468 0 1 7436
+box 468 7436 652 7504
 << labels >>
 flabel locali s 324 924 1188 1012 0 FreeSans 400 0 0 0 AVDD
 port 4 nsew
-flabel locali s 468 10604 1188 10692 0 FreeSans 400 0 0 0 OUT
+flabel locali s 468 7436 1188 7524 0 FreeSans 400 0 0 0 OUT
 port 1 nsew
-flabel locali s 1404 10780 1620 10868 0 FreeSans 400 0 0 0 VCP
+flabel locali s 1404 7612 1620 7700 0 FreeSans 400 0 0 0 VCP
 port 2 nsew
-flabel locali s 1404 7612 1620 7700 0 FreeSans 400 0 0 0 VBP
+flabel locali s 1404 4444 1620 4532 0 FreeSans 400 0 0 0 VBP
 port 3 nsew
 flabel locali s 1404 1276 1620 1364 0 FreeSans 400 0 0 0 PWRUP_N
 port 5 nsew

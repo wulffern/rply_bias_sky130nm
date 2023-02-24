@@ -45,6 +45,8 @@ summary:
 DATE=${shell date +%Y-%m-%d}
 post:
 	cp README.md ../../docs/_posts/${DATE}-RPLY_BIAS.markdown
+	test -d ../../docs/posts/results/||mkdir  ../../docs/posts/results/
+	cp -r results/*.html ../../docs/_posts/results/
 
 tfsall:
 

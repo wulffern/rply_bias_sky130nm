@@ -40,6 +40,12 @@
                "addPortOnRects" : [  ["B","M1", "X1:B"]]
            }
         },
+        { "name" : "NCHA",
+          "leech" : "PCHA",
+          "meta" : {
+              "symbol" : "nch"
+          }
+        },
         { "name" : "PCM",
           "meta" : {
 
@@ -68,7 +74,8 @@
         },
         { "name" : "PMIRR",
           "meta" : {
-              "symbol" : "PMIRR"
+              "symbol" : "PMIRR",
+              "noSchematic" : true
           },
           "class" : "LayoutCell",
           "boundaryIgnoreRouting" : 0,

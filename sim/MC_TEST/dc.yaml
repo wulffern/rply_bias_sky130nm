@@ -1,0 +1,33 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+dc:
+  src:
+    - i_pchdla
+    - i_sky_n8
+    - i_sky_n1
+  name: IBP_1U
+  min: -2%
+  typ: 2
+  max: 2%
+  scale: 1e6
+  unit: uA
+percent:
+  src:
+    - ip_pchdla
+    - ip_sky_n8
+    - ip_sky_n1
+  name: IBP_1U
+  min: -2%
+  typ: 0
+  max: 2%
+  scale: 1
+  unit: uA

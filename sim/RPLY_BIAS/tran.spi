@@ -16,7 +16,7 @@
 #ifdef Debug
 .option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12 method=gear
 #else
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter gmin=1e-15 method=gear
+.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter gmin=1e-12 method=gear
 #endif
 
 *-----------------------------------------------------------------
@@ -60,25 +60,24 @@ B5 temp 0 v=temper
 * MEASURES
 *----------------------------------------------------------------
 
-.tran 10n {T_END}
+*.tran 10n {T_END}
 
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 
-#ifdef Debug
-*.save all
-#else
+
 .save v(VDD_1V8) v(VSS) v(PWRUP_1V8) v(LPI) v(LPO) v(IBP_1U)
 + v(XDUT.VD1) v(XDUT.VD2) v(XDUT.VR1) v(D_VD) v(D_VD_REF) v(D_VD_ERR)
 + v(V_OFF) i(VDD)
 + v(xdut.xcm.vstart)
++ v(xdut.xcm.vbp)
++ v(xdut.xcm.vc)
 + v(temp)
 .save  i(v0)
 .save  i(v1)
 .save  i(v2)
 .save  i(v3)
-#endif
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -91,15 +90,10 @@ set color0=white
 set color1=black
 unset askquit
 
-tran 10n 2.5u 1n
+tran 10n 2.5u 100n
 
 write
-#ifdef Debug
-
-
-*quit
-#else
 
 quit
-#endif
+
 .endc

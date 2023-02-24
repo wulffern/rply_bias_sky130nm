@@ -1,0 +1,20 @@
+* Measure RPLYBS_CMPMOS
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+* Calculate percentage
+
+let x = "i(i-sweep)"
+let v-sweep=x
+
+let id_pcm  = (i(v2) - x)
+let vds_pch = v(vdd) - v(xm1.dcm)
+
+
+write {cicname}_meas.raw
+
+echo "MEAS_END"
+.endc
