@@ -2,7 +2,7 @@
 layout: post
 title: RPLY_BIAS simulation
 categories: sim
-permalink: posts/rply_bias_sch
+
 ---
 
 Electrical verification of the top level bias block
