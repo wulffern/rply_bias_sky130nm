@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -381,6 +382,6 @@ C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -50 -220 0 0 {name=x3  }
 C {devices/ipin.sym} -590 -370 0 0 {name=p9 lab=PWRUP_1V8}
 C {devices/ipin.sym} -590 -330 0 0 {name=p10 lab=PWRUP_N_1V8}
 C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -390 -630 0 1 {name=xb2 }
-C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -390 -550 0 1 {name=xb1 }
+C {SUN_TR_SKY130NM/SUNTR_PCHDLCM.sym} -390 -550 0 1 {name=xb11}
 C {devices/lab_wire.sym} -540 -60 0 1 {name=l2 sig_type=std_logic lab=VBN}
 C {devices/lab_wire.sym} -160 -220 0 1 {name=l3 sig_type=std_logic lab=VSTART1}
