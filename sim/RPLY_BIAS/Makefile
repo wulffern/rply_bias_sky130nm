@@ -1,12 +1,13 @@
+
+include ../../tech/make/sim.make
+
 TB=tran
 VIEW=Sch
 #VIEW=Lay
+LIB=RPLY_BIAS_SKY130NM
+CELL=RPLY_BIAS
 
 OPT=
-
-netlist:
-	cd ../../work && xschem -q -x -b -s -n ../design/RPLY_BIAS_SKY130NM/RPLY_BIAS.sch
-	perl -pi -e "s/\*\*\.subckt/\.subckt/ig;s/\*\*\.ends/\.ends/ig;" ../../work/xsch/RPLY_BIAS.spice
 
 test:
 	${MAKE} typical OPT="Debug"
