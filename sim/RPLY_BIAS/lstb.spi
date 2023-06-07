@@ -21,11 +21,8 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-#ifdef Debug
-.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter gmin=1e-12 method=gear
-#else
-.option reltol=1e-5 srcsteps=1 ramptime=10n noopiter gmin=1e-15 method=gear
-#endif
+.option reltol=1e-4 gmin=1e-15
+
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -82,7 +79,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 1u 0
+optran 0 0 0 100n 4u 0
 op
 write {cicname}_op.raw
 

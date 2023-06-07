@@ -1,2 +1,2 @@
-,offset_max,offset_min,ibp,ibp_max_ppm_c,ibp_typ_ppm_c,ibp_min_ppm_c,name,type,time,OK
-0,1.3601679999999998,-0.472123,0.7790311999999999,3454.950139133699,3003.53827237628,2480.5297386743227,tsweep_SchGtKttTtVt,Sch,Thu May 25 17:00:13 2023,False
+,ibp,ibp_nA_c,ibp_ppm_c,name,type,time,OK
+0,0.7815661,2.2745528304758156,2910.250112531513,tsweep_SchGtKttTtVt,Sch,Wed Jun  7 21:24:19 2023,True

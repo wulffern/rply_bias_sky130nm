@@ -1,36 +1,34 @@
 
-offset:
-  src:
-    - offset_max
-    - offset_min
-  name: OTA input offset
-  typ: 0
-  min: -10
-  max: 10
-  scale: 1e3
-  unit: mV
-
 ibp:
   src:
     - ibp
   name: Current at 25C
-  typ: 3
-  max: 10%
-  min: -10%
+  typ: 0.79
+  max: 5%
+  min: -5%
   digits: 3
   scale: 1e6
   unit: uA
 
 
-tempco:
+tempconA:
   src:
-    - ibp_max_ppm_c
-    - ibp_typ_ppm_c
-    - ibp_min_ppm_c
+    - ibp_nA_c
   name: Temp Coefficient
-  typ: 3000
+  typ: 2.3
   max: 20%
   min: -20%
+  digits: 1
+  scale: 1
+  unit: nA/C
+
+tempco:
+  src:
+    - ibp_ppm_c
+  name: Temp Coefficient
+  typ: 3000
+  max: 12%
+  min: -12%
   digits: 1
   scale: 1
   unit: ppm/C

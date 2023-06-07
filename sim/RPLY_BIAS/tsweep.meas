@@ -29,9 +29,12 @@ meas dc dvderr_min MIN d_vd_err
 
 * Get current
 meas dc ibp find i(V0) at=25
-
 meas dc v(xdut.vd1) find v(xdut.vd1) at=25
 meas dc v(xdut.vr1) find v(xdut.vr1) at=25
+
+meas dc vstart_N40 find v(xdut.xcm.vstart) at=-40
+meas dc vstart_25 find v(xdut.xcm.vstart) at=25
+meas dc vstart_125 find v(xdut.xcm.vstart) at=125
 
 write {cicname}_meas.raw
 

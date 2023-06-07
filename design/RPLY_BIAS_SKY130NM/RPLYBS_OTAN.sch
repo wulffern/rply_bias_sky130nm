@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -215,17 +216,17 @@ lab=VSS}
 N 190 -630 230 -630 {
 lab=VSS}
 N -650 -480 -620 -480 {
-lab=PWRUP_1V8}
+lab=PWRUP_N_1V8}
 C {cborder/border_s.sym} 400 -480 0 0 {}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} 150 -1290 0 0 {name=x1  }
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -530 -1290 0 1 {name=x2 }
-C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} -120 -400 0 0 {name=x4  }
-C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} 150 -690 0 0 {name=x7  }
-C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -530 -690 0 1 {name=x6  }
-C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -690 -390 0 0 {name=x11  }
-C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -430 -390 0 0 {name=x12  }
-C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -330 -970 0 0 {name=xp1[19:0] }
-C {SUN_TR_SKY130NM/SUNTR_NCHLA.sym} -70 -970 0 1 {name=xp2[19:0] }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 150 -1290 0 0 {name=x1  }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} -530 -1290 0 1 {name=x2 }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_2C1F2.sym} -120 -400 0 0 {name=x4  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 150 -690 0 0 {name=x7  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} -530 -690 0 1 {name=x6  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_2C1F2.sym} -690 -390 0 0 {name=x11  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_2C1F2.sym} -430 -390 0 0 {name=x12  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} -330 -970 0 0 {name=xp1 }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} -70 -970 0 1 {name=xp2 }
 C {devices/ipin.sym} -670 -1340 0 0 {name=p1 lab=VDD_1V8}
 C {devices/lab_pin.sym} -470 -750 0 1 {name=l2 sig_type=std_logic lab=VBN1}
 C {devices/opin.sym} 200 -1070 0 0 {name=p2 lab=VO}
@@ -245,22 +246,22 @@ C {devices/lab_wire.sym} -350 -390 0 0 {name=l21 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} -10 -430 0 0 {name=l22 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -20 -350 0 0 {name=l23 sig_type=std_logic lab=VBP1}
 C {devices/lab_wire.sym} -190 -970 0 0 {name=l24 sig_type=std_logic lab=VSS}
-C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 200 -400 0 0 {name=x3  }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_2C1F2.sym} 200 -400 0 0 {name=x3  }
 C {devices/lab_pin.sym} 160 -400 0 0 {name=l31 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 310 -430 0 0 {name=l32 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 300 -350 0 0 {name=l33 sig_type=std_logic lab=VBP2}
 C {devices/ipin.sym} -730 -970 3 1 {name=p7 lab=IBP_2U}
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} -130 -920 3 1 {name=x30  }
 C {devices/lab_wire.sym} -60 -880 0 0 {name=l37 sig_type=std_logic lab=VSS}
-C {SUN_TR_SKY130NM/SUNTR_PCHDL.sym} 470 -400 0 0 {name=x14  }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_2C1F2.sym} 470 -400 0 0 {name=x14  }
 C {devices/lab_pin.sym} 430 -400 0 0 {name=l10 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 580 -430 0 0 {name=l11 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 570 -350 0 0 {name=l14 sig_type=std_logic lab=VBP3}
-C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -690 -870 0 1 {name=x10[1:0]}
-C {SUN_TR_SKY130NM/SUNTR_NCHLCM.sym} -290 -870 0 0 {name=x13}
-C {SUN_TR_SKY130NM/SUNTR_NCHDL.sym} -90 -780 0 1 {name=x16  }
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} -690 -870 0 1 {name=x10[1:0]}
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} -290 -870 0 0 {name=x13}
+C {CNR_ATR_SKY130NM/CNRATR_NCH_2C1F2.sym} -90 -780 0 1 {name=x16  }
 C {devices/lab_pin.sym} -50 -780 0 1 {name=l13 sig_type=std_logic lab=PWRUP_1V8}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -330 -1290 0 0 {name=x17[1:0]}
-C {SUN_TR_SKY130NM/SUNTR_PCHLCM.sym} -70 -1290 0 1 {name=x18[1:0]}
+C {CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} -330 -1290 0 0 {name=x17[1:0]}
+C {CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} -70 -1290 0 1 {name=x18[1:0]}
 C {devices/lab_wire.sym} -200 -940 0 0 {name=l15 sig_type=std_logic lab=VS}
 C {devices/ipin.sym} -640 -480 0 0 {name=p8 lab=PWRUP_N_1V8}

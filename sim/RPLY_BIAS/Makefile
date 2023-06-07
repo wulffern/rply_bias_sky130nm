@@ -7,7 +7,7 @@ VIEW=Sch
 LIB=RPLY_BIAS_SKY130NM
 CELL=RPLY_BIAS
 
-OPT=
+OPT= --sha
 
 test:
 	${MAKE} typical OPT="Debug"
@@ -31,7 +31,7 @@ etcnotemp: netlist
 	cicsim run --name ${VIEW}_etcnotemp ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Tt" "Vl,Vh"
 
 mc: netlist
-	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Amctt" "Tt" "Vt"
+	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
 ntc: netlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt

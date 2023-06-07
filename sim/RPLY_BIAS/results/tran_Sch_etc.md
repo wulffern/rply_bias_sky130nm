@@ -5,18 +5,12 @@ For details see <a href='tran_Sch_etc.html'>tran_Sch_etc.html</a>
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
 |Delta VD error|dvderr | Spec | -10.000 mV |  | 10.000 mV |
-| | | ('Sch',)|-0.045 mV | 2.442 mV | 6.022 mV |
+| | | ('Sch',)|-0.270 mV | 3.211 mV | 6.951 mV |
 |OTA input offset|offset | Spec | -10.00 mV |  | 10.00 mV |
-| | | ('Sch',)|-1.24 mV | 0.27 mV | 2.69 mV |
-|Bias current|ibp\_1u\_0 | Spec | 0.55 uA | 0.78 uA | 1.09 uA |
-| | | ('Sch',)| |  |  |
-|Bias current|ibp\_1u\_1 | Spec | 0.55 uA | 0.78 uA | 1.09 uA |
-| | | ('Sch',)| |  |  |
-|Bias current|ibp\_1u\_2 | Spec | 0.55 uA | 0.78 uA | 1.09 uA |
-| | | ('Sch',)| |  |  |
-|Bias current|ibp\_1u\_3 | Spec | 0.55 uA | 0.78 uA | 1.09 uA |
-| | | ('Sch',)|0.61 uA | 0.80 uA | 1.00 uA |
-|Active current|i\_active | Spec | 10.00 uA | 30.00 uA | 50.00 uA |
-| | | ('Sch',)|19.78 uA | 24.99 uA | 31.36 uA |
-|Power down current|i\_pwrdwn | Spec |  |  | 10.00 nA |
-| | | ('Sch',)|47.06 nA | 72.44 nA | 245.74 nA |
+| | | ('Sch',)|-1.47 mV | 1.04 mV | 3.61 mV |
+|Bias current|ibp\_1u\_3 | Spec | 0.60 uA | 0.79 uA | 1.20 uA |
+| | | ('Sch',)|0.61 uA | 0.81 uA | 1.01 uA |
+|Active current|i\_active | Spec | 18.75 uA | 25.00 uA | 31.25 uA |
+| | | ('Sch',)|18.93 uA | 23.70 uA | 29.63 uA |
+|Power down current|i\_pwrdwn | Spec |  | 25.00 nA | 200.00 nA |
+| | | ('Sch',)|10.30 nA | 50.72 nA | 139.89 nA |

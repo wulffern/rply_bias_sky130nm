@@ -4,15 +4,9 @@ For details see <a href='tsweep_Sch_etcnotemp.html'>tsweep_Sch_etcnotemp.html</a
 
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
-|OTA input offset|offset\_max | Spec | -10.00 mV |  | 10.00 mV |
-| | | ('Sch',)|0.18 mV | 1.37 mV | 2.69 mV |
-|OTA input offset|offset\_min | Spec | -10.00 mV |  | 10.00 mV |
-| | | ('Sch',)|-1.24 mV | -0.49 mV | 0.34 mV |
-|Current at 25C|ibp | Spec | 2.700 uA | 3.000 uA | 3.300 uA |
-| | | ('Sch',)|0.772 uA | 0.779 uA | 0.786 uA |
-|Temp Coefficient|ibp\_max\_ppm\_c | Spec | 2400.0 ppm/C | 3000.0 ppm/C | 3600.0 ppm/C |
-| | | ('Sch',)|3438.3 ppm/C | 3456.4 ppm/C | 3476.5 ppm/C |
-|Temp Coefficient|ibp\_typ\_ppm\_c | Spec | 2400.0 ppm/C | 3000.0 ppm/C | 3600.0 ppm/C |
-| | | ('Sch',)|2981.8 ppm/C | 3004.1 ppm/C | 3026.3 ppm/C |
-|Temp Coefficient|ibp\_min\_ppm\_c | Spec | 2400.0 ppm/C | 3000.0 ppm/C | 3600.0 ppm/C |
-| | | ('Sch',)|2450.3 ppm/C | 2482.7 ppm/C | 2508.2 ppm/C |
+|Current at 25C|ibp | Spec | 0.750 uA | 0.790 uA | 0.830 uA |
+| | | ('Sch',)|0.770 uA | 0.780 uA | 0.785 uA |
+|Temp Coefficient|ibp\_nA\_c | Spec | 1.8 nA/C | 2.3 nA/C | 2.8 nA/C |
+| | | ('Sch',)|2.3 nA/C | 2.3 nA/C | 3.7 nA/C |
+|Temp Coefficient|ibp\_ppm\_c | Spec | 2640.0 ppm/C | 3000.0 ppm/C | 3360.0 ppm/C |
+| | | ('Sch',)|2891.6 ppm/C | 2926.3 ppm/C | 4752.4 ppm/C |

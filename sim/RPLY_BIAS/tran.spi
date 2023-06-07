@@ -74,6 +74,7 @@ B5 temp 0 v=temper
 + v(V_OFF) i(VDD)
 + v(xdut.xcm.vstart)
 + v(temp)
++ v(xdut.xcm.vc)
 .save  i(v0)
 .save  i(v1)
 .save  i(v2)
@@ -94,12 +95,5 @@ unset askquit
 tran 10n 2.5u 1n
 
 write
-#ifdef Debug
-
-
-*quit
-#else
-
 quit
-#endif
 .endc

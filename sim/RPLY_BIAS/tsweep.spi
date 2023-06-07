@@ -25,11 +25,9 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-#ifdef Debug
-.option reltol=1e-3 srcsteps=1 ramptime=10n noopiter keepopinfo gmin=1e-12 method=gear
-#else
-.option reltol=1e-6 noopiter gmin=1e-15
-#endif
+
+.option reltol=1e-4  gmin=1e-15
+
 
 
 *-----------------------------------------------------------------
@@ -103,6 +101,7 @@ B5 temp 0 v=temper
 + v(xdut.xcm.vstart)
 + v(xdut.xcm.vstart1)
 + v(xdut.xcm.vbn)
++ v(xdut.xcm.vc)
 *+ v(xdut.xota.vin_ls) v(xdut.xota.vip_ls) v(xdut.xota.vs) v(xdut.xota.vbpb) v(xdut.xota.vbp)
 + v(t_op) v(t_on)
 + v(temp)
@@ -128,7 +127,7 @@ set color1=black
 unset askquit
 
 
-optran 0 0 0 100n 4u 0
+optran 0 0 0 100n 10u 0
 dc TEMP -40 125 5
 
 write
