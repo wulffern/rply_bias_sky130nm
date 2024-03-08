@@ -28,6 +28,9 @@ SVGP =${<:%.sch=%}.svg
 SVG = ${subst ../design/,,${SVGP}}
 
 
+mag:
+	cicpy mag ${LIB} ${CELL}
+
 svg:
 	@echo "---\nlayout: page\ntitle: Schematic\npermalink: sch\n---\n" > ../docs/schematic.md
 	${MAKE} svgf
