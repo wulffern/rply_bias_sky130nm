@@ -1,0 +1,15 @@
+
+groups:
+  pcm:
+    a:
+      type: current_mirror
+    b:
+      type: cascode
+    c:
+      type: other
+  ncm:
+    a:
+      type: current_mirror
+pattern:
+  - pcm
+  - ncm start
