@@ -1,6 +1,3 @@
----
-layout: home
----
 
 [![Docs](../../actions/workflows/jekyll-gh-pages.yml/badge.svg?branch=main)](https://wulffern.github.io/rply_bias_sky130nm)
 
