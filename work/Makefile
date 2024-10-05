@@ -22,23 +22,23 @@ CELLS = RPLY_BIAS
 include ../tech/make/core.make
 
 
-SCHS := $(wildcard ../design/${LIB}/*.sch)
-BINS := $(SCHS:%.sch=%)
-SVGP =${<:%.sch=%}.svg
-SVG = ${subst ../design/,,${SVGP}}
+#SCHS := $(wildcard ../design/${LIB}/*.sch)
+#BINS := $(SCHS:%.sch=%)
+#SVGP =${<:%.sch=%}.svg
+#SVG = ${subst ../design/,,${SVGP}}
 
 
 mag:
 	cicpy mag ${LIB} ${CELL}
 
-svg:
-	@echo "---\nlayout: page\ntitle: Schematic\npermalink: sch\n---\n" > ../docs/schematic.md
+#svg:
+#	@echo "---\nlayout: page\ntitle: Schematic\npermalink: sch\n---\n" > ../docs/schematic.md
 	${MAKE} svgf
 
-svgf: ${BINS}
+#svgf: ${BINS}
 
-%: %.sch
-	xschem -x -q -p --svg $<
-	test -d  ../docs/assets/${LIB} || mkdir ../docs/assets/${LIB}
-	cp plot.svg ../docs/assets/${SVG}
-	echo "## ${SVG}\n ![${SVG}](/assets/${SVG})\n" >> ../docs/schematic.md
+#%: %.sch
+	#xschem -x -q -p --svg $<
+	#test -d  ../docs/assets/${LIB} || mkdir ../docs/assets/${LIB}
+	#cp plot.svg ../docs/assets/${SVG}
+	#echo "## ${SVG}\n ![${SVG}](/assets/${SVG})\n" >> ../docs/schematic.md
