@@ -1,5 +1,6 @@
 
-[![Docs](../../actions/workflows/jekyll-gh-pages.yml/badge.svg?branch=main)](https://wulffern.github.io/rply_bias_sky130nm)
+[![DOCS](https://github.com/wulffern/rply_bias_sky130nm/actions/workflows/docs.yaml/badge.svg)](https://analogicus.com/rply_bias_sky130nm/)
+
 
 # Who
 Carsten Wulff (carsten@wulff.no)
